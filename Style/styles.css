@@ -1,0 +1,1766 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Estilos para la barra de navegación */
+header {
+    background-color: #67fa60;
+    color: white;
+    width: 100%;
+    height: auto;
+    right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Icon {
+    align-items: center;
+    padding-top: 1%;
+}
+
+.aparecer {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: auto;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-button {
+    background-color: rgb(15, 15, 15);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    right: auto;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+}
+
+/* Estilos para la sección de inicio */
+#inicio {
+    text-align: center;
+    padding: 40px 0;
+}
+
+#inicio h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#inicio img {
+    max-width: 100%;
+    height: auto;
+}
+
+#inicio h3 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+#inicio h4 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Estilos adicionales para pantallas más pequeñas (responsive) */
+@media screen and (max-width: 600px) {
+    header {
+        display: flex;
+        right: 0;
+        justify-content: space-between;
+        align-items: center;
+        height: 5vh;
+    }
+
+    header img {
+        width: 15vw;
+    }
+
+    .menu {
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+        visibility: hidden;
+
+
+
+    }
+
+    .menu.visible {
+        flex-direction: column;
+        background-color: rgba(54, 254, 4, 0.927);
+        position: absolute;
+        top: 30px;
+        right: 1px;
+        bottom: 250px;
+        visibility: visible;
+        opacity: 10;
+        transition: all 1s ease;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        justify-content: start;
+
+    }
+
+    .aparecer {
+        display: block;
+        border: none;
+        background: none;
+
+    }
+
+    .menu-toggle:checked+.menu {
+        display: flex;
+
+    }
+
+    #menu-button {
+        display: block;
+
+    }
+
+    .menu {
+        list-style: none;
+        display: flex;
+        padding-inline-start: 0%;
+        padding-inline-end: -10%;
+
+    }
+
+    .menu li {
+        margin: 0;
+    }
+
+    .menu a {
+        text-decoration: solid;
+        color: rgb(6, 69, 240);
+    }
+
+}
+
+@media screen and (min-widt: 600px) {
+    header {
+        display: flex;
+        right: 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header img {
+        width: 15vw;
+    }
+
+    .menu {
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 10px;
+        visibility: hidden;
+
+
+
+    }
+
+    .menu.visible {
+        flex-direction: column;
+        background-color: rgb(79, 250, 36);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        visibility: visible;
+        opacity: 2;
+
+    }
+
+    .aparecer {
+        display: block;
+
+    }
+
+    .menu-toggle:checked+.menu {
+        display: flex;
+
+    }
+
+    #menu-button {
+        display: block;
+
+    }
+
+    .menu {
+        list-style: none;
+        display: flex;
+
+    }
+
+    .menu li {
+        margin: 0;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: rgb(12, 12, 12);
+    }
+
+
+}
+
+@media screen and (min-widt: 768px) {
+    header {
+        display: flex;
+        right: 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header img {
+        width: 15vw;
+    }
+
+    .menu {
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 10px;
+        visibility: hidden;
+
+
+
+    }
+
+    .menu.visible {
+        flex-direction: column;
+        background-color: rgb(79, 250, 36);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        visibility: visible;
+        opacity: 2;
+
+    }
+
+    .aparecer {
+        display: block;
+
+    }
+
+    .menu-toggle:checked+.menu {
+        display: flex;
+
+    }
+
+    #menu-button {
+        display: block;
+
+    }
+
+    .menu {
+        list-style: none;
+        display: flex;
+
+    }
+
+    .menu li {
+        margin: 0;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: rgb(12, 12, 12);
+    }
+
+}
+
+@media screen and (min-widt: 992px) {
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Estilos para la barra de navegación */
+    header {
+        background-color: #67fa60;
+        color: white;
+        width: 100%;
+        height: auto;
+        right: auto;
+    }
+
+    .aparecer {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: auto;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        height: auto;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    #menu-button {
+        background-color: rgb(15, 15, 15);
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        right: auto;
+    }
+
+    .menu {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+
+    }
+
+    .menu li {
+        margin: 0;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: rgb(12, 12, 12);
+    }
+
+}
+
+@media screen and (min-widt: 1200px) {
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Estilos para la barra de navegación */
+    header {
+        background-color: #67fa60;
+        color: white;
+        width: 100%;
+        height: auto;
+        right: auto;
+    }
+
+    .aparecer {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: auto;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        height: auto;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    #menu-button {
+        background-color: rgb(15, 15, 15);
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        right: auto;
+    }
+
+    .menu {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+
+    }
+
+    .menu li {
+        margin: 0;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: rgb(12, 12, 12);
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilo para la sección */
+section#Artritis {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la sección */
+section#Artritis h1 {
+    color: #101011;
+}
+
+/* Estilos para la imagen */
+section#Artritis img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Contenedor de texto */
+.Artritis {
+    text-align: justify;
+    margin: 10px 0;
+    /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Estilos para párrafos */
+.Artritis p {
+    line-height: 1.5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para la lista con viñetas personalizadas */
+.Artritis ul {
+    list-style-type: square;
+    margin-left: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    section#Artritis img {
+        float: none;
+        /* Elimina el flotamiento en dispositivos móviles */
+    }
+
+    .Artritis {
+        margin: 0;
+    }
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #67fa60;
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#menu a {
+    color: #090909;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para el menú de navegación en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #menu {
+        display: none;
+        text-align: center;
+        background-color: #67fa60;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #menu.active {
+        display: block;
+    }
+
+    #menu li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilo para la sección */
+section#Asma {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la sección */
+section#Asma h1 {
+    color: #030303;
+}
+
+/* Estilos para la imagen */
+section#Asma img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Contenedor de texto */
+.Asma {
+    text-align: justify;
+    margin: 10px 0;
+    /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Estilos para párrafos */
+.Asma p {
+    line-height: 1.5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para la lista con viñetas personalizadas */
+.Asma ul {
+    list-style-type: square;
+    margin-left: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    section#Asma img {
+        float: none;
+        /* Elimina el flotamiento en dispositivos móviles */
+    }
+
+    .Asma {
+        margin: 0;
+    }
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #67fa60;
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-button {
+    background-color: #67fa60;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#menu a {
+    color: #060606;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para el menú de navegación en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #menu {
+        display: none;
+        text-align: center;
+        background-color: #67fa60;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #menu.active {
+        display: block;
+    }
+
+    #menu li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilo para la sección */
+section#Cancer {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la sección */
+section#Cancer h2 {
+    color: #050505;
+}
+
+/* Estilos para la imagen */
+section#Cancer img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Contenedor de texto */
+.cancer {
+    text-align: justify;
+    margin: 10px 0;
+    /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Estilos para párrafos */
+.cancer p {
+    line-height: 1.5;
+}
+
+/* Estilos para la lista con viñetas personalizadas */
+.cancer ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    section#Cancer img {
+        float: none;
+        /* Elimina el flotamiento en dispositivos móviles */
+    }
+
+    .cancer {
+        margin: 0;
+    }
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #67fa60;
+    color: #67fa60;
+    padding: 10px;
+    text-align: right;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-button {
+    background-color: #67fa60;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#menu a {
+    color: #090909;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para el menú de navegación en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #menu {
+        display: none;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #menu.active {
+        display: block;
+    }
+
+    #menu li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilo para la sección */
+section#Diabetes {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la sección */
+section#Diabetes h2 {
+    color: #0b0b0b;
+}
+
+/* Estilos para la imagen */
+section#Diabetes img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Contenedor de texto */
+.diabetes {
+    text-align: justify;
+    margin: 10px 0;
+    /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Estilos para párrafos */
+.diabetes p {
+    line-height: 1.5;
+}
+
+/* Estilos para la lista con viñetas personalizadas */
+.diabetes ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    section#Diabetes img {
+        float: none;
+        /* Elimina el flotamiento en dispositivos móviles */
+    }
+
+    .diabetes {
+        margin: 0;
+    }
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #67fa60;
+    color: #fef9f9;
+    padding: 10px;
+    text-align: right;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-button {
+    background-color: #67fa60;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#menu a {
+    color: #070707;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para el menú de navegación en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #menu {
+        display: none;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #menu.active {
+        display: block;
+    }
+
+    #menu li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilo para la sección */
+section#Epilepsia {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la sección */
+section#Epilepsia h2 {
+    color: #040404;
+}
+
+/* Estilos para la imagen */
+section#Epilepsia img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Contenedor de texto */
+section#Epilepsia div {
+    text-align: justify;
+    margin: 10px 0;
+    /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Estilos para párrafos */
+section#Epilepsia p {
+    line-height: 1.5;
+}
+
+/* Estilos para la lista con viñetas personalizadas */
+section#Epilepsia ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    section#Epilepsia img {
+        float: none;
+        /* Elimina el flotamiento en dispositivos móviles */
+    }
+
+    section#Epilepsia div {
+        margin: 0;
+    }
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #67fa60;
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-button {
+    background-color: #67fa60;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#menu a {
+    color: #070707;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para el menú de navegación en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #menu {
+        display: none;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #menu.active {
+        display: block;
+    }
+
+    #menu li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilo para la sección */
+section#Epoc {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la sección */
+section#Epoc h2 {
+    color: #0a0a0a;
+}
+
+/* Estilos para la imagen */
+section#Epoc img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Contenedor de texto */
+section#Epoc div {
+    text-align: justify;
+    margin: 10px 0;
+    /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Estilos para párrafos */
+section#Epoc p {
+    line-height: 1.5;
+}
+
+/* Estilos para la lista con viñetas personalizadas */
+section#Epoc ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    section#Epoc img {
+        float: none;
+        /* Elimina el flotamiento en dispositivos móviles */
+    }
+
+    section#Epoc div {
+        margin: 0;
+    }
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #67fa60;
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-button {
+    background-color: #67fa60;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#menu a {
+    color: #090909;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para el menú de navegación en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #menu {
+        display: none;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #menu.active {
+        display: block;
+    }
+
+    #menu li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilo para la sección */
+section#EsclerosisMultiple {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la sección */
+section#EsclerosisMultiple h2 {
+    color: #040404;
+}
+
+/* Estilos para la imagen */
+section#EsclerosisMultiple img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0; /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Contenedor de texto */
+section#EsclerosisMultiple div {
+    text-align: justify;
+    margin: 10px 0; /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Estilos para párrafos */
+section#EsclerosisMultiple p {
+    line-height: 1.5;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    section#EsclerosisMultiple img {
+        float: none; /* Elimina el flotamiento en dispositivos móviles */
+    }
+
+    section#EsclerosisMultiple div {
+        margin: 0;
+    }
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #67fa60;
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-button {
+    background-color: #67fa60;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#menu a {
+    color: #0b0b0b;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para el menú de navegación en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #menu {
+        display: none;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #menu.active {
+        display: block;
+    }
+
+    #menu li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilo para la sección */
+section#FibrosisQuistica {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la sección */
+section#FibrosisQuistica h2 {
+    color: #111112;
+}
+
+/* Estilos para la imagen */
+section#FibrosisQuistica img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0; /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Contenedor de texto */
+section#FibrosisQuistica div {
+    text-align: justify;
+    margin: 10px 0; /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Estilos para párrafos */
+section#FibrosisQuistica p {
+    line-height: 1.5;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    section#FibrosisQuistica img {
+        float: none; /* Elimina el flotamiento en dispositivos móviles */
+    }
+
+    section#FibrosisQuistica div {
+        margin: 0;
+    }
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #67fa60;
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-button {
+    background-color: #67fa60;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#menu a {
+    color: #080808;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para el menú de navegación en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #menu {
+        display: none;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #menu.active {
+        display: block;
+    }
+
+    #menu li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilo para la sección */
+section#MaldeParkinson {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la sección */
+section#MaldeParkinson h2 {
+    color: #080808;
+}
+
+/* Estilos para la imagen */
+section#MaldeParkinson img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0; /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Contenedor de texto */
+section#MaldeParkinson div {
+    text-align: justify;
+    margin: 10px 0; /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Estilos para párrafos */
+section#MaldeParkinson p {
+    line-height: 1.5;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    section#MaldeParkinson img {
+        float: none; /* Elimina el flotamiento en dispositivos móviles */
+    }
+
+    section#MaldeParkinson div {
+        margin: 0;
+    }
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #67fa60;
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-button {
+    background-color: #67fa60;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#menu a {
+    color: #080808;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para el menú de navegación en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #menu {
+        display: none;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #menu.active {
+        display: block;
+    }
+
+    #menu li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilo para la sección */
+section#Migrania {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la sección */
+section#Migrania h2 {
+    color: #080808;
+}
+
+/* Estilos para la imagen */
+section#Migrania img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0; /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Contenedor de texto */
+section#Migrania div {
+    text-align: justify;
+    margin: 10px 0; /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Estilos para párrafos */
+section#Migrania p {
+    line-height: 1.5;
+}
+
+/* Estilos para listas */
+section#Migrania ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    section#Migrania img {
+        float: none; /* Elimina el flotamiento en dispositivos móviles */
+    }
+
+    section#Migrania div {
+        margin: 0;
+    }
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #67fa60;
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-button {
+    background-color: #67fa60;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#menu a {
+    color: #0a0a0a;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para el menú de navegación en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #menu {
+        display: none;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #menu.active {
+        display: block;
+    }
+
+    #menu li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilo para la sección */
+section#Narcolepsia {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la sección */
+section#Narcolepsia h2 {
+    color: #0a0a0a;
+}
+
+/* Estilos para la imagen */
+section#Narcolepsia img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0; /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Contenedor de texto */
+section#Narcolepsia div {
+    text-align: justify;
+    margin: 10px 0; /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Estilos para párrafos */
+section#Narcolepsia p {
+    line-height: 1.5;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    section#Narcolepsia img {
+        float: none; /* Elimina el flotamiento en dispositivos móviles */
+    }
+
+    section#Narcolepsia div {
+        margin: 0;
+    }
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #67fa60;
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-button {
+    background-color: #67fa60;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#menu a {
+    color: #070707;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para el menú de navegación en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #menu {
+        display: none;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #menu.active {
+        display: block;
+    }
+
+    #menu li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilo para la sección */
+section#VIH {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la sección */
+section#VIH h2 {
+    color: #0a0a0a;
+}
+
+/* Estilos para la imagen */
+section#VIH img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0; /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Contenedor de texto */
+section#VIH div {
+    text-align: justify;
+    margin: 10px 0; /* Reduce el margen vertical en dispositivos móviles */
+}
+
+/* Estilos para párrafos */
+section#VIH p {
+    line-height: 1.5;
+}
+
+/* Estilos para listas */
+section#VIH ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #67fa60;
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-button {
+    background-color: #67fa60;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#menu a {
+    color: #060606;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para el menú de navegación en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #menu {
+        display: none;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #menu.active {
+        display: block;
+    }
+
+    #menu li {
+        display: block;
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta> <http-equive="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Salud Importante</title>
+        <link rel="stylesheet" href="Style/styles.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!--             <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" id="menu-button">
+            </label> -->
+            <div class="Icon"><i class="fa-brands fa-slack fa-2xl" style="color: #07a4f2;"></i></div>
+            <ul class="menu" class="vinietas">
+                <button id="cerrar" class="cerrar aparecer"><i class="fa-solid fa-xmark fa-2xl"
+                        style="color: #f50000;"></i></button>
+                <li><a href="Artritis.html">Artritis</a></li>
+                <li><a href="Asma.html">Asma</a></li>
+                <li><a href="Cancer.html">Cancer</a></li>
+                <li><a href="Diabetes.html">Diabetes</a></li>
+                <li><a href="Epilepsia.html">Epilepsia</a></li>
+                <li><a href="Epoc.html">Epoc</a></li>
+                <li><a href="Esclerosis Multiple.html">Esclerosis Múltiple</a></li>
+                <li><a href="Fibrosis Quistica.html">Fibrosis Quistica</a></li>
+                <li><a href="Mal de Parkinson.html">Mal de Parkinson</a></li>
+                <li><a href="Migraña.html">Migraña</a></li>
+                <li><a href="Narcolepsia.html">Narcolepsia</a></li>
+                <li><a href="VIH.html">VIH/SIDA</a></li>
+            </ul>
+        </nav>
+        <button id="abrir" class="aparecer"><i class="fa-solid fa-list fa-xl"></i></button>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>La Salud es Importante</h2>
+            <img src="Img Sitio Web/Salud Importante.jpg" alt="Logotipo">
+            <h3>Informar sobre los tipos de enfermedades cronicas</h3>
+            <h4>Una enfermedad puede llegar en el momento menos esperado, por ello hay que estar informados</h4>
+            <img src="Img Sitio Web/slogan.png" alt="Slogan">
+
+        </section>
+
+        <footer>
+            <p>Todos los derechos reservados &copy; 2023</p>
+        </footer>
+        <script src="https://kit.fontawesome.com/910c943232.js" crossorigin="anonymous"></script>
+</body>
+
+
+<script>
+    const abrir = document.querySelector('#abrir');
+    const menu = document.querySelector('.menu');
+    const cerrar = document.querySelector('#cerrar');
+
+    abrir.addEventListener('click', () => {
+        menu.classList.add('visible');
+    });
+
+    cerrar.addEventListener('click', () => {
+        menu.classList.remove('visible');
+    })
+
+</script>
+
+</html>
