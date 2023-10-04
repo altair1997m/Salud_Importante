@@ -7,6 +7,32 @@
     <title>Mla de Parkinson</title>
     <link rel="stylesheet" href="Style/styles.css">
 </head>
+<header>
+    <nav>
+        <!--             <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" id="menu-button">
+        </label> -->
+        <div class="Icon"><i class="fa-brands fa-slack fa-2xl" style="color: #07a4f2;"></i></div>
+        <ul class="menu" class="vinietas">
+            <button id="cerrar" class="cerrar aparecer"><i class="fa-solid fa-xmark fa-2xl"
+                    style="color: #f50000;"></i></button>
+            <li><a href="Artritis.html">Artritis</a></li>
+            <li><a href="Asma.html">Asma</a></li>
+            <li><a href="Cancer.html">Cancer</a></li>
+            <li><a href="Diabetes.html">Diabetes</a></li>
+            <li><a href="Epilepsia.html">Epilepsia</a></li>
+            <li><a href="Epoc.html">Epoc</a></li>
+            <li><a href="Esclerosis Multiple.html">Esclerosis Múltiple</a></li>
+            <li><a href="Fibrosis Quistica.html">Fibrosis Quistica</a></li>
+            <li><a href="Mal de Parkinson.html">Mal de Parkinson</a></li>
+            <li><a href="Migraña.html">Migraña</a></li>
+            <li><a href="Narcolepsia.html">Narcolepsia</a></li>
+            <li><a href="VIH.html">VIH/SIDA</a></li>
+            <li><a href="index.html">Inicio</a></li>
+        </ul>
+    </nav>
+    <button id="abrir" class="aparecer"><i class="fa-solid fa-list fa-xl"></i></button>
+</header>
 
 <body>
     <Section id="Mal de Parkinson">
@@ -69,7 +95,22 @@
         <ul id="menu">
             <li><a href="index.html">Inicio</a></li>
         </ul>
+        <script src="https://kit.fontawesome.com/910c943232.js" crossorigin="anonymous"></script>
+
 
 </body>
+<script>
+    const abrir = document.querySelector('#abrir');
+    const menu = document.querySelector('.menu');
+    const cerrar = document.querySelector('#cerrar');
 
+    abrir.addEventListener('click', () => {
+        menu.classList.add('visible');
+    });
+
+    cerrar.addEventListener('click', () => {
+        menu.classList.remove('visible');
+    })
+
+</script>
 </html>

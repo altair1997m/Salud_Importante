@@ -92,7 +92,7 @@ nav {
 }
 
 /* Estilos adicionales para pantallas más pequeñas (responsive) */
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
     header {
         display: flex;
         right: 0;
@@ -121,11 +121,11 @@ nav {
 
     .menu.visible {
         flex-direction: column;
-        background-color: rgba(54, 254, 4, 0.927);
+        background-color: rgba(133, 251, 103, 0.927);
         position: absolute;
         top: 30px;
         right: 1px;
-        bottom: 250px;
+        bottom: 130px;
         visibility: visible;
         opacity: 10;
         transition: all 1s ease;
@@ -150,6 +150,7 @@ nav {
         display: block;
 
     }
+
 
     .menu {
         list-style: none;
@@ -430,6 +431,7 @@ nav {
         color: rgb(12, 12, 12);
     }
 }
+
 
 body {
     font-family: Arial, sans-serif;
